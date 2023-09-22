@@ -1,2 +1,2 @@
 run:
-	FLASK_APP=main.py FLASK_ENV=development flask run
+	FLASK_APP=wsgi.py FLASK_RUN_HOST=0.0.0.0 flask run
