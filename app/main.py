@@ -9,7 +9,7 @@ from PIL import Image
 from ultralytics import YOLO
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, origins="*")
 
 MODEL_PATH = "app/best.pt"
 
