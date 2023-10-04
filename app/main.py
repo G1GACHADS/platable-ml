@@ -4,10 +4,12 @@ import json
 import torch
 import torchvision.transforms as transforms
 from flask import Flask, Response, jsonify, request
+from flask_cors import CORS
 from PIL import Image
 from ultralytics import YOLO
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 MODEL_PATH = "app/best.pt"
 
